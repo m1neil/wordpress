@@ -10,7 +10,6 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -97,7 +96,34 @@ h6 {
   /* identical to box height, or 100% */
   text-align: center;
   text-transform: uppercase;
-  color: #F9BF3B;
+  color: #f9bf3b;
+}
+
+.title-underline {
+  font-family: "Roboto";
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #252525;
+  position: relative;
+  padding-bottom: 24px;
+  text-align: center;
+}
+.title-underline:after {
+  content: "";
+  position: absolute;
+  width: 217px;
+  height: 4px;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  background-color: #f9bf3b;
+}
+
+.title-blue {
+  font-weight: 900;
+  color: #299cbd;
+  font-family: "Roboto";
+  text-transform: uppercase;
 }
 
 .btn {
@@ -105,15 +131,16 @@ h6 {
   height: 72px;
   line-height: 72px;
   font-family: "Roboto";
-  font-weight: 300;
   font-size: 20px;
+  text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.22);
   text-transform: uppercase;
-  color: #FFFFFF;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2798B9), to(#3AB6DA));
-  background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%);
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
+  color: #ffffff;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  background-image: linear-gradient(to top, #2798b9, #3ab6da);
+  outline: solid 4px rgba(0, 0, 0, 0.11);
+  text-align: center;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -132,6 +159,9 @@ h6 {
   background: url("../img/fullscreen/main_bg.jpg") center center/cover no-repeat;
   text-align: center;
   padding: 38px 0px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fullscreen__logo {
   margin-bottom: 53px;
@@ -163,8 +193,7 @@ h6 {
   content: "";
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 292px;
   height: 2px;
   background-color: #fff;
@@ -184,12 +213,12 @@ h6 {
   font-size: 21px;
   line-height: 28px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 70px;
 }
 .fullscreen__text span {
   font-weight: 700;
-  color: #F9BF3B;
+  color: #f9bf3b;
 }
 .fullscreen__btn {
   margin-bottom: 70px;
@@ -200,6 +229,205 @@ h6 {
   font-size: 15px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 5px;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+.waiting {
+  background-color: #efefef;
+  padding: 85px 0px 70px;
+}
+.waiting__title {
+  color: #252525;
+  margin-bottom: 20px;
+}
+.waiting__subtitle {
+  font-family: "Roboto";
+  font-size: 23px;
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 45px;
+}
+.waiting__row {
+  display: flex;
+  margin: 0px -24px;
+}
+.waiting__column {
+  text-align: center;
+  flex: 0 1 33.333%;
+  padding: 0px 24px;
+}
+.waiting__image {
+  margin-bottom: 20px;
+}
+.waiting__image img {
+  max-width: 100%;
+}
+.waiting__text {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 21px;
+  color: #4a4a4a;
+}
+
+.optimization {
+  min-height: 550px;
+}
+.optimization .container {
+  position: relative;
+  padding: 102px 0px 102px;
+}
+.optimization__image {
+  position: absolute;
+  left: -250px;
+  top: 48px;
+  z-index: -1;
+}
+.optimization__body {
+  margin-left: 391px;
+}
+.optimization__title {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+.optimization__text {
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.59;
+  text-align: justify;
+  color: #4a4a4a;
+}
+.optimization__text p {
+  margin-bottom: 10px;
+}
+.optimization__text p:last-child {
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+.finish {
+  min-height: 447px;
+  padding: 83px 0px 80px;
+  background: url("../img/finish/finish_bg.jpg") center center/cover no-repeat;
+}
+.finish__title {
+  color: #efefef;
+  margin-bottom: 40px;
+}
+.finish__columns {
+  display: flex;
+  margin: 0px -17.5px;
+}
+.finish__column {
+  flex: 0 1 20%;
+  padding: 0px 17.5px;
+}
+.finish__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  height: 115px;
+  background-color: #b4e2ff;
+  border-radius: 50%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+}
+.finish__text {
+  font-family: "Roboto";
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.18;
+  text-align: center;
+  color: #efefef;
+}
+
+.bonus {
+  padding: 85px 0px;
+  text-align: center;
+  background-color: #efefef;
+}
+.bonus__gift {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.bonus__ribbon {
+  margin-bottom: 1px;
+}
+.bonus__ribbon img {
+  margin-left: 23px;
+}
+.bonus__text {
+  font-family: "Roboto";
+  font-size: 30px;
+  line-height: 1.43;
+  text-align: center;
+  color: #252525;
+  margin-bottom: 45px;
+}
+.bonus__btn {
+  margin: 0px auto;
+}
+
+.webinar {
+  padding: 80px 0px 65px;
+  text-align: center;
+  min-height: 515px;
+}
+.webinar__image {
+  margin-bottom: 35px;
+}
+.webinar__suptitle {
+  font-family: "Roboto";
+  font-size: 30px;
+  text-align: center;
+  color: #252525;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.webinar__title {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.webinar__text {
+  font-family: "Roboto";
+  font-size: 23px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.footer {
+  min-height: 166px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footer__top {
+  margin-bottom: 10px;
+}
+.footer__link {
+  font-family: "Roboto";
+  font-size: 15px;
+  color: #888;
+  font-weight: 300;
+  text-decoration: underline;
+}
+.footer__link:first-child:after {
+  content: "|";
+  margin-left: 5px;
+  margin-right: 2.5px;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__link:visited {
+  color: #888;
+}
+.footer__link_not-line {
+  text-decoration: none;
 }
