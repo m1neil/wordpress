@@ -1,7 +1,5 @@
 @import "_nullstyles";
 @import "_modify";
-// fonts
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@100;300;500;700;900&display=swap");
 
 .wrapper {
     min-height: 100vh;
@@ -243,19 +241,8 @@
     text-align: center;
     background-color: #efefef;
     &__gift {
-        display: inline-block;
         text-align: center;
         margin-bottom: 30px;
-    }
-
-    &__ribbon {
-        img {
-            margin-left: 23px;
-        }
-        margin-bottom: 1px;
-    }
-
-    &__squares {
     }
 
     &__text {
